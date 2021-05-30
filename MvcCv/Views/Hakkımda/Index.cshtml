@@ -1,0 +1,49 @@
+﻿@using MvcCv.Models
+@model List<TblAbout>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<form class="form-group">
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+
+    </form>*@
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>ADRES</th>
+        <th>TELEFON</th>
+
+        <th>MAIL</th>
+
+        <th>ISLEMLER</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Name</td>
+            <td>@x.Surname</td>
+            <td>@x.Address</td>
+            <td>@x.Phone</td>
+            <td>@x.Mail</td>
+
+            <td>
+                <a href="/Hakkımda/Sil/@x.Id" class="btn btn-info">Sil</a>
+
+                <a href="/Hakkımda/Güncelle/@x.Id" class="btn btn-primary">Güncelle</a>
+            </td>
+        </tr>
+
+    }
+
+</table>
+<a href="/Hakkımda/Ekle/" class="btn btn-danger">Ekle</a>
+
+
+

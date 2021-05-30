@@ -1,0 +1,32 @@
+﻿@using MvcCv.Models
+@model List<TblInterests>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>HOBİ</th>
+        <th>İŞLEMLER</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+
+            <td>@x.Interest</td>
+
+            <td>
+                <a href="/Hobiler/Sil/@x.Id" class="btn btn-info">Sil</a>
+
+                <a href="/Hobiler/Güncelle/@x.Id" class="btn btn-primary">Güncelle</a>
+            </td>
+        </tr>
+
+    }
+
+</table>
+<a href="/Hobiler/Ekle" class="btn btn-danger">Ekle</a>
+

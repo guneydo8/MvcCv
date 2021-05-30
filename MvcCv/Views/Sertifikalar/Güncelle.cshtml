@@ -1,0 +1,15 @@
+﻿@model MvcCv.Models.TblCertificates
+@{
+    ViewBag.Title = "Güncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Güncelle2", "Sertifikalar", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+
+    <label>Sertifika</label>
+    @Html.TextBoxFor(x => x.Certificate, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+}

@@ -1,0 +1,16 @@
+﻿@model MvcCv.Models.TblSkills
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+
+    <label>Yetenek</label>
+    @Html.TextBoxFor(x => x.Skills, new { @class = "form-control" })
+    <br />
+   
+    <button class="btn btn-warning">Kaydet</button>
+
+</form>
+

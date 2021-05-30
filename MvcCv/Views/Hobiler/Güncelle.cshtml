@@ -1,0 +1,16 @@
+﻿@model MvcCv.Models.TblInterests
+@{
+    ViewBag.Title = "Güncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Güncelle2", "Hobiler", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+
+    <label>Hobi</label>
+    @Html.TextBoxFor(x => x.Interest, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+}
+

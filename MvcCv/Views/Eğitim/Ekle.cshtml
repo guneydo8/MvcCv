@@ -1,0 +1,27 @@
+﻿@model MvcCv.Models.TblEducation
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+
+    <label>Kurum</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Fakülte</label>
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    <label>Bölüm</label>
+    @Html.TextBoxFor(x => x.Department, new { @class = "form-control" })
+    <br />
+    <label>Ortalama</label>
+    @Html.TextBoxFor(x => x.Gpa, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-warning">Kaydet</button>
+
+</form>
+
+
+
